@@ -51,6 +51,7 @@
 </head>
 <body>
     <center>
+    <h1>Weather Forecast 5 Days Data</h1>
     <div id="div1">
         city :<input type="text" id="name"><br>
         chart:<input type="text" id="chart"><br>
@@ -74,7 +75,7 @@
 
         let city=document.getElementById("name").value
         let chart=document.getElementById("chart").value
-        wurl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}`
+        wurl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}&units=metric`
         let res=await fetch(wurl)
         let data=await res.json()
         console.log(data)
